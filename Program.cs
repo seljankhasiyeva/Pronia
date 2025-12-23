@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Pronia.DAL;
 
 namespace Pronia
 {
@@ -11,6 +13,9 @@ namespace Pronia
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<AppDbContext>(ops =>
+            ops.UseSqlServer("Server=localhost;Database=YourDatabaseName;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True")
+            );
 
             var app = builder.Build();
 
@@ -30,7 +35,7 @@ namespace Pronia
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Blog}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }
