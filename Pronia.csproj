@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <BaseOutputPath>bin\Debug\net8.0\</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +14,20 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\admin\css\maps\" />
+    <Folder Include="wwwroot\admin\fonts\Roboto\" />
+    <Folder Include="wwwroot\admin\images\auth\" />
+    <Folder Include="wwwroot\admin\images\faces\" />
+    <Folder Include="wwwroot\admin\js\" />
+    <Folder Include="wwwroot\admin\vendors\base\" />
+    <Folder Include="wwwroot\admin\vendors\chart.js\" />
+    <Folder Include="wwwroot\admin\vendors\datatables.net-bs4\" />
+    <Folder Include="wwwroot\admin\vendors\datatables.net\" />
+    <Folder Include="wwwroot\admin\vendors\mdi\" />
   </ItemGroup>
 
 </Project>
