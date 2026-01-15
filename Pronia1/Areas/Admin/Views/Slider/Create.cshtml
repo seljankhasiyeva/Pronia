@@ -1,14 +1,19 @@
-﻿@using Pronia1.Models
-@model Slider
+﻿@using Pronia1.Areas.Admin.ViewModels
+@model CreateSliderVM
 <div class="row">
     <div class="col-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Add Slide</h4>
-                <form class="forms-sample" enctype="multipart/form-data">
+                <form asp-action="Create"
+                      asp-controller="Slider"
+                      method="post"
+                      enctype="multipart/form-data"
+                      class="forms-sample">
+
                     <div class="form-group">
                         <label for="Photo">Image</label>
-                        <input asp-for="Photo" class="form-control" placeholder="Image">
+                        <input asp-for="Photo" type="file" class="form-control" accept="image/*" placeholder="Image">
                         <span asp-validation-for="Photo" style="color:red"></span>
                     </div>
                     <div class="form-group">

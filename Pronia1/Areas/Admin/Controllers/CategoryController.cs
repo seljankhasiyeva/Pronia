@@ -28,23 +28,45 @@ namespace Pronia1.Areas.Admin.Controllers
             return View();
         }
 
-        [HttpPost]
+        //[HttpPost]
 
+        //public async Task<IActionResult> Create(Category category)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View();
+        //    }
+        //    bool result = await _context.Categories.AnyAsync(c => c.Name == category.Name);
+        //    if (result)
+        //    {
+        //        ModelState.AddModelError("Name", "The category with this name already exists");
+        //        return View();
+        //    }
+        //    await _context.AddAsync(category);
+        //    await _context.SaveChangesAsync();
+        //    return RedirectToAction("Index");
+        //}
+        [HttpPost]
         public async Task<IActionResult> Create(Category category)
         {
             if (!ModelState.IsValid)
             {
-                return View();
+                return View(category);
             }
-            bool result = await _context.Categories.AnyAsync(c => c.Name == category.Name);
+
+            bool result = await _context.Categories
+                .AnyAsync(c => c.Name == category.Name);
+
             if (result)
             {
                 ModelState.AddModelError("Name", "The category with this name already exists");
-                return View();
+                return View(category);
             }
-            await _context.AddAsync(category);
+
+            await _context.Categories.AddAsync(category);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+
+            return RedirectToAction(nameof(Index));
         }
 
 
@@ -104,10 +126,23 @@ namespace Pronia1.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        //public async Task<IActionResult> Detail(int id)
+        //{
+        //    List<Category> categories = await _context.Categories.Include(c => c.Products).ToListAsync();
+        //    return View(categories);
+        //}
+
         public async Task<IActionResult> Detail(int id)
         {
-            List<Category> categories = await _context.Categories.Include(c => c.Products).ToListAsync();
-            return View(categories);
+            Category category = await _context.Categories
+                .Include(c => c.Products)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (category == null)
+                return NotFound();
+
+            return View(category);
         }
+
     }
 }

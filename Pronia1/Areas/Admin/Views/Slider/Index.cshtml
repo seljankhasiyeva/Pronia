@@ -47,8 +47,15 @@
                                         @slide.Order
                                     </td>
                                     <td>
-                                        <a asp-action="update" asp-route-id="@slide.Id" class="btn btn-warning">Update</a>
-                                        <a asp-action="delete" asp-route-id="@slide.Id" class="btn btn-danger">Delete</a>
+                                        <a asp-area="Admin"
+                                           asp-controller="Slider" asp-action="Update" asp-route-id="@slide.Id" class="btn btn-warning">Update</a>
+                                        <a asp-area="Admin"
+                                           asp-controller="Slider"
+                                           asp-action="Delete"
+                                           asp-route-id="@slide.Id"
+                                           class="btn btn-danger">
+                                            Delete
+                                        </a>
                                         <a class="btn btn-primary">Detail</a>
                                     </td>
                                 </tr>

@@ -3,10 +3,12 @@ using Pronia1.Models.Base;
 
 namespace Pronia1.Models
 {
-    public class Category:BaseEntity
+    public class Category : BaseEntity
     {
-        [MaxLength(30, ErrorMessage ="Name cannot contain more than 30 symbols")]
-        public string Name { get; set; }
-        public List<Product> Products { get; set; }
+        [Required(ErrorMessage = "Name is required")]
+        [MaxLength(30, ErrorMessage = "Name cannot contain more than 30 symbols")]
+        public string Name { get; set; } = null!;
+
+        public List<Product>? Products { get; set; }
     }
 }

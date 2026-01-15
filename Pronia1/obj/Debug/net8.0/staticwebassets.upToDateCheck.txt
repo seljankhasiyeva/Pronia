@@ -206,7 +206,6 @@ wwwroot\assets\images\website-images\1-1-120x120.webp
 wwwroot\assets\images\website-images\1-1-1820x443.jpg
 wwwroot\assets\images\website-images\1-1-270x300.jpg
 wwwroot\assets\images\website-images\1-1-310x220.jpg
-wwwroot\assets\images\website-images\1-1-524x617.png
 wwwroot\assets\images\website-images\1-1-570x633.jpg
 wwwroot\assets\images\website-images\1-1-768x546.webp
 wwwroot\assets\images\website-images\1-1-770x300.jpg
@@ -360,3 +359,12 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\assets\images\website-images\fdc15611-5084-46c6-b48b-c1a3f6959635Screenshot 2026-01-09 182134.png
+wwwroot\assets\images\website-images\0d2e8097-eae4-440a-b931-43cf09c69824Screenshot 2025-10-20 215917.png
+wwwroot\assets\images\website-images\d734b7a3-c018-46e2-8696-8c75ab916922Screenshot 2025-10-20 215809.png
+wwwroot\assets\images\website-images\1a275bad-177d-4638-81e4-855bd008c523Screenshot 2025-10-20 215809.png
+wwwroot\assets\images\website-images\57c246de-727d-43df-8135-a11b875b91b4Screenshot 2025-10-20 215917.png
+wwwroot\assets\images\website-images\45315d06-19cf-46d1-8fdc-f10c91243bbbScreenshot 2025-11-30 073213.png
+wwwroot\assets\images\website-images\cdbf931c-17c5-46e7-bd20-fbde767d412bScreenshot 2025-12-15 032919.png
+wwwroot\assets\images\website-images\d18902b1-546c-41e9-91d0-4bb9a67ad8ffScreenshot 2025-10-19 153821.png
+wwwroot\assets\images\website-images\4d4f088d-9134-4fc7-ba10-b21869398e2fScreenshot 2025-10-19 214602.png
